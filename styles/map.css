@@ -1,4 +1,9 @@
 #quest-list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* #quest-list {
     position: relative;
     background-image: url("../assets/map.jpg");
     background-size: contain;
@@ -21,4 +26,4 @@
 
 .quest.completed:after {
     content: ' ✔';
-}
+} */
