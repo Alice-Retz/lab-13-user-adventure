@@ -29,6 +29,10 @@ header {
     border-bottom: 1px solid orange;
 }
 
+header img {
+    height: 75px;
+} 
+
 h1 {
     margin: 0 20px;
     flex-grow: 2;
@@ -45,9 +49,12 @@ footer {
 }
 
 main {
-    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: calc(var(--footer-height));
 }
-
 
 input, fieldset, button {
     border: 1px solid orange;
@@ -109,4 +116,8 @@ button {
 
 .profile-stat-label {
     text-transform: uppercase; 
+}
+
+.avatar {
+    height: 50px;
 }
