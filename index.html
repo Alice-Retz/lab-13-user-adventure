@@ -14,41 +14,44 @@
 
 <body>
     <header>
-        <div class="gutter-right logo">
-            <img src="assets/big-logo.png" />
-        </div>
+        <img src="assets/templogo.png" id="logo"/> <h1>Adventure Quest</h1>
     </header>
     <main>
-        <section class="main-section">
-            <form id="user-form">
-                <label for="name">
-                    Name
-                    <input name="name" type="text">
-                </label>
+        <form id="user-form">
+            <h3>Welcome to Adventure Quest</h3>
+            <h4>You are a small adventurer in a big world!</h4>
+            <label for="name">
+                Name
+                <input name="name" type="text">
+            </label>
+
+            <fieldset>
+                <legend>Pick Your Lineage:</legend>
+                <p id="avatars">
                 <label for="lineage">
                     Rabbit Folk
+                    <img src="assete/avatars/rabbit.png">
                     <input type="radio" name="lineage" id="rabbit-folk" value="rabbit-folk">
                 </label>
                 <label for="lineage">
                     Kobold
+                    <img src="assete/avatars/kobold.png">
                     <input type="radio" name="lineage" id="kobold" value="kobold">
                 </label>
                 <label for="lineage">
                     Tortle
+                    <img src="assete/avatars/tortle.png">
                     <input type="radio" name="lineage" id="tortle" value="tortle">
                 </label>
                 <label for="lineage">
                     Owl Folk
+                    <img src="assete/avatars/owl.png">
                     <input type="radio" name="lineage" id="owl-folk" value="owl-folk">
                 </label>
-                <button type="submit">Start your journey!</button>
-            </form>
-        </section>
+            </fieldset>
+            <button type="submit">Start your journey!</button>
+        </form>
     </main>
-    <footer>
-        <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
-    </footer>
-
     <script type="module" src="/home/home.js"></script>
 </body>
 

@@ -75,7 +75,9 @@ h2 {
 }
 
 header img {
-    height: var(--header-height);
+    height: 70px;
+    margin-top: 10px;
+    margin-bottom: 3px;
 }
 
 p {

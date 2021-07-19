@@ -1,13 +1,12 @@
 // getUser and setUser functions
-// pop user in localstorage
-export function saveUser(user) {
-    const json = JSON.stringify(user);
-    localStorage.setItem('user', json);
+const USER = 'USER';
+
+export function getUser(){
+    const userString = localStorage.getItem(USER);
+    return JSON.parse(userString);
 }
 
-export function getUser() {
-    const json = localStorage.getItem('user');
-    if (!json) return null;
-    const user = JSON.parse(json);
-    return user;
+export function saveUser(userObject){
+    const userString = JSON.stringify(userObject);
+    localStorage.setItem(USER, userString);
 }
