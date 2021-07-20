@@ -1,12 +1,17 @@
 import quests from '../data/quest-data.js';
 import { getUser } from '../data/storage-utils.js';
+import { hasCompletedAllQuests } from './has-completed-all-quests.js';
 
-// const user = getUser();
+
+const user = getUser();
+
+if (user.hp <= 0 || hasCompletedAllQuests(user)) {
+    window.location('../results');
+}
 
 const questList = document.getElementById('quest-list');
 
 for (let quest of quests) {
-    const user = getUser();
 
     if (user.completed[quest.id]) {
         createQuestSpan(quest);

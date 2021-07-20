@@ -56,9 +56,10 @@ input, fieldset, button {
     border: 1px solid rgb(17, 155, 4);
 }
 
-/* input[type=radio] {
+/* .lineage input[type=radio] {
     display: none;
-} */
+}  */
+
 input[type=radio]:checked + label {
     border: 1px solid rgb(17, 155, 4);
     padding: 3px;
@@ -68,6 +69,7 @@ input[type=radio]:checked + label {
 button {
     margin: 20px 0;
     padding: 20px;
+    margin-bottom: 100px;
     font-family: 'IM Fell DW Pica SC', serif;
     font-size: 1.2em;
     font-weight: bolder;
