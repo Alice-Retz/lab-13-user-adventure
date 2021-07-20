@@ -1,64 +1,75 @@
 
-const monsters = {
-    id: 'monsters',
+const forest = {
+    id: 'forest',
     title: 'Enter the Scary Forest',
     map: {
         top: '89%',
         left: '44%'
     },
-    image: 'monsters.jpg',
+    image: 'forest.jpg',
     description: `
-        You enter the quest chamber only to be confronted by a hoard of
-        monsters. And they look hungry. What do you do?
+        You decide yo prove your bravery by entering the scary forest. You've 
+        been told all of your life how dangerous it is, but you also know there's
+        valuable resources to be found within. You walk for about half an hour 
+        and think that, so far, it doesn't live up to its name when you hear a 
+        hawk screech over head. What do you do?
     `,
     choices: [{
-        id: 'negotiate',
-        description: 'Negotiate with them',
+        id: 'hide',
+        description: 'Hide!',
         result: `
-            Knowing the monsters are not too bright, you offer to go buy them all
-            turkey dinners from the village pub. They give you 35 gold for meals
-            that will never be delivered. I hope you can live with yourself. 
+            You dive inside of a hollow, moss covered log just as the hawk's 
+            talons scrape the ground where you stood. You hear the hawk's wings 
+            beat as it flies away, but you wait in the log for an hour just to 
+            be sure it's gone before running home. Inside of the log you find
+            some common mushrooms you know Auntie Mole loves, and put a 
+            couple in your bag. When you return home, she gives 10 gold for 
+            the lot.
         `,
         hp: 0,
-        gold: 35
+        gold: 10
     }, {
         id: 'fight',
-        description: 'Fiiiiiggghhhttt!',
+        description: 'Fight!',
         result: `
-            Brandishing your sword you let out a warrior's cry and charge into the monsters
-            hacking and slashing. Before long you stand panting gazing across the bodies of
-            your vanquished foes. The bad news is you take 30 hp damage. The good news is you
-            find 50 gold.
+            From your back you pull the spear you made by tying a found arrow 
+            head between blue stained popsicle sticks. You hold your ground and
+            as the hawk descends you stab your spear upwards as hard as you can
+            in to the hawk's foot. With a scream and wild flapping, the hawk
+            takes off for the sky, catching you in the shoulder with a talon and
+            dealing 20 damage. It also leaves behind several feathers, which you
+            sell in the market for 30 gold.
         `,
-        hp: -30,
-        gold: 50
+        hp: -20,
+        gold: 30
     }, {
         id: 'run',
-        description: 'Run away like good Sir Robin',
+        description: 'Make a break for hom!',
         result: `
-            As you make a dash for the door a giant spider descends and take a bite of flesh,
-            causing 50 hp damage.
+            You attempt to dash back the way you came, hoping to exit the woods
+            and return to your burrow. The hawk already has you in his sights,
+            however, and dives for you. Why did you think you could out speed a
+            diving hawk? He grabs you with his talons, and it's all over.
         `,
         hp: -50,
         gold: 0
     }]
 };
 
-const dragon = {
-    id: 'dragon',
+const bear = {
+    id: 'bear',
     title: 'Find the Dangerous Bear',
     map: {
         top: '17%',
         left: '37%'
     },
-    image: 'dragon.jpg',
-    audio: 'dragon.wav',
-    action: 'dragon-growl.aiff',
+    image: 'bear.jpg',
     description: `
-        You run to a nearby village you have heard is being
-        terrorized by a dragon. Sure enough as you rent a room
-        in a local inn, you go outside and see the dragon about
-        to lay seige! What do you do?
+        You hear tell in the market about a bear that has been digging up folx' 
+        larders and eating whatever is inside, including the owners! This is 
+        your chance to make a name for yourself as a brave adventurer. You 
+        narrow down a likely area to find the bear from the rumors you collect,
+         
     `,
     choices: [{
         id: 'run',
@@ -99,8 +110,8 @@ const dragon = {
     }]
 };
 
-const treasure = {
-    id: 'treasure',
+const dungeon = {
+    id: 'dungeon',
     title: 'Explore a spooky dungeon',
     map: {
         top: '31%',
@@ -139,9 +150,9 @@ const treasure = {
 };
 
 const quests = [
-    monsters, 
-    treasure,
-    dragon,
+    forest, 
+    dungeon,
+    bear,
 ];
 
 export default quests;
