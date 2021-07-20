@@ -1,9 +1,7 @@
-// quests[0].choices[0].description; ==> 'negotiate with them'
-
 
 const monsters = {
     id: 'monsters',
-    title: 'A Den of Monsters',
+    title: 'Enter the Scary Forest',
     map: {
         top: '89%',
         left: '44%'
@@ -48,7 +46,7 @@ const monsters = {
 
 const dragon = {
     id: 'dragon',
-    title: 'A HAIRY!!! Dragon',
+    title: 'Find the Dangerous Bear',
     map: {
         top: '17%',
         left: '37%'
@@ -103,7 +101,7 @@ const dragon = {
 
 const treasure = {
     id: 'treasure',
-    title: 'A Golden Treasure',
+    title: 'Explore a spooky dungeon',
     map: {
         top: '31%',
         left: '5%'

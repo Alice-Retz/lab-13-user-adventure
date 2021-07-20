@@ -9,7 +9,7 @@
 ## Map
 * Header
 * Map image
-* Quest link: Fight a dragon
+* Quest link: Fight a bear
 * Quest link: Explore a dungeon
 * Quest link: Enter the dark forest
 
