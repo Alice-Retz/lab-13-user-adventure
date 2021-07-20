@@ -3,8 +3,8 @@ import { createUser } from './create-user.js';
 
 const userForm = document.getElementById('user-form');
 
-userForm.addEventListener('submit', e => {
-    e.preventDefault();
+userForm.addEventListener('submit', (event) => {
+    event.preventDefault();
     const formData = new FormData(userForm);
     console.log(formData.get('name'));
     const newUser = createUser(formData);

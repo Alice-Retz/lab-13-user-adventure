@@ -1,7 +1,6 @@
 
 body {
-    font-family: 'Heebo', "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
-    background: wheat;
+    background: rgb(195, 245, 179);
     margin: 0;
 }
 
@@ -22,11 +21,12 @@ header, main {
 }
 
 header {
+
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: white;
-    border-bottom: 1px solid orange;
+    border-bottom: 1px solid rgb(17, 155, 4);
 }
 
 header img {
@@ -34,8 +34,46 @@ header img {
 } 
 
 h1 {
+    font-family: 'IM Fell DW Pica SC', serif;
+    font-size: 70px;
     margin: 0 20px;
     flex-grow: 2;
+}
+
+h2 {
+    font-family: 'IM Fell DW Pica SC', serif;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: calc(var(--footer-height));
+    font-family: 'IM Fell French Canon SC', serif;
+    font-weight: 600;
+}
+
+input, fieldset, button {
+    border: 1px solid rgb(17, 155, 4);
+}
+
+input[type=radio] {
+    display: none;
+}
+input[type=radio]:checked + label {
+    border: 1px solid rgb(17, 155, 4);
+    padding: 3px;
+    border-radius: 5px;
+}
+
+button {
+    margin: 20px 0;
+    padding: 20px;
+    font-family: 'IM Fell DW Pica SC', serif;
+    font-size: 1.2em;
+    font-weight: bolder;
 }
 
 footer {
@@ -46,25 +84,6 @@ footer {
     background: lightgrey;
     text-align: center;
     padding-top: 25px;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: calc(var(--footer-height));
-}
-
-input, fieldset, button {
-    border: 1px solid orange;
-}
-
-button {
-    margin: 20px 0;
-    padding: 20px;
-    font-size: 1.2em;
-    font-weight: bolder;
 }
 
 .text-prompt {

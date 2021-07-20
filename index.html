@@ -5,7 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <!-- begin fonts
+    IM Fell DWA PICA for large display text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&display=swap" rel="stylesheet"> 
+    <!-- IM Fell French Canon for body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&family=IM+Fell+French+Canon+SC&display=swap" rel="stylesheet"> 
+    <!-- end fonts -->
     <link rel="stylesheet" href="./styles/home.css">
     <title>Document</title>
 </head>
@@ -21,31 +30,31 @@
             <h4>You are a small adventurer in a big world!</h4>
             <label for="name">
                 Name
-                <input name="name" type="text">
+                <input name="name" type="text" required="">
             </label>
 
             <fieldset>
                 <legend>Pick Your Lineage:</legend>
                 <p id="avatars">
-                <label for="lineage">
+                    <input type="radio" name="lineage" id="rabbit-folk" value="rabbit-folk" required="">
+                <label for="rabbit-folk">
                     Rabbit Folk
                     <img src="assets/avatars/rabbit.png" class="avatar">
-                    <input type="radio" name="lineage" id="rabbit-folk" value="rabbit-folk">
                 </label>
-                <label for="lineage">
+                <input type="radio" name="lineage" id="kobold" value="kobold" required="">
+                <label for="kobold">
                     Kobold
                     <img src="assets/avatars/kobold.png" class="avatar">
-                    <input type="radio" name="lineage" id="kobold" value="kobold">
                 </label>
-                <label for="lineage">
+                <input type="radio" name="lineage" id="tortle" value="tortle"required="">
+                <label for="tortle">
                     Tortle
-                    <img src="assets/avatars/tortle.png" class="avatar">
-                    <input type="radio" name="lineage" id="tortle" value="tortle">
+                    <img src="assets/avatars/tortle.png" class="avatar" >
                 </label>
-                <label for="lineage">
+                <input type="radio" name="lineage" id="owl-folk" value="owl-folk" required="">
+                <label for="owl-folk">
                     Owl Folk
                     <img src="assets/avatars/owl.png" class="avatar">
-                    <input type="radio" name="lineage" id="owl-folk" value="owl-folk">
                 </label>
             </fieldset>
             <button type="submit">Start your journey!</button>
