@@ -1,5 +1,6 @@
 import quests from '../data/quest-data.js';
 import findById from '../data/find-by-id.js';
+import { getUser, saveUser } from '../data/storage-utils.js';
 
 const searchParams = new URLSearchParams(window.location.search);
 console.log(searchParams.get('questId'));
@@ -11,7 +12,6 @@ const choices = document.getElementById('choices');
 
 
 const quest = findById(quests, searchParams.get('questId'));
-console.log(quest);
 
 questTitle.textContent = quest.title;
 questImage.src = `../assets/quests/${quest.image}`;
@@ -33,3 +33,24 @@ for (let choice of quest.choices){
     
     choices.append(label);
 }
+
+const questForm = document.getElementById('choice-form');
+questForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const choiceForm = new FormData(questForm);
+
+    const choiceValue = choiceForm.get('choice');
+    const choiceData = findById(quest.choices, choiceValue);
+    
+    const user = getUser();
+    user.gold += choiceData.gold;
+    user.hp += choiceData.hp;
+    user.completed[quest.id] = true;
+    saveUser(user);
+
+    const backLink = document.getElementById('back-link');
+    questDescription.textContent = choiceData.result;
+    questForm.classList.add('hidden');
+    backLink.classList.remove('hidden');
+
+});

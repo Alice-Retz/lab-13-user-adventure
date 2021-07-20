@@ -12,16 +12,13 @@ h1, h2 {
     box-sizing: border-box;
 }
 
-.hidden {
-    display: none;
-}
 
 header, main {
     padding: 8px;
 }
 
 header {
-
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -59,9 +56,9 @@ input, fieldset, button {
     border: 1px solid rgb(17, 155, 4);
 }
 
-input[type=radio] {
+/* input[type=radio] {
     display: none;
-}
+} */
 input[type=radio]:checked + label {
     border: 1px solid rgb(17, 155, 4);
     padding: 3px;
@@ -84,6 +81,10 @@ footer {
     background: lightgrey;
     text-align: center;
     padding-top: 25px;
+}
+
+.hidden {
+    display: none;
 }
 
 .text-prompt {
