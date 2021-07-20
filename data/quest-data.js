@@ -6,7 +6,7 @@ const forest = {
         top: '89%',
         left: '44%'
     },
-    image: 'forest.jpg',
+    image: 'forest.png',
     description: `
         You decide yo prove your bravery by entering the scary forest. You've 
         been told all of your life how dangerous it is, but you also know there's
@@ -63,7 +63,7 @@ const bear = {
         top: '17%',
         left: '37%'
     },
-    image: 'bear.jpg',
+    image: 'bear.png',
     description: `
         You hear tell in the market about a bear that has been digging up folx' 
         larders and eating whatever is inside, including the owners! This is 
@@ -118,9 +118,7 @@ const dungeon = {
         left: '5%'
     },
     prerequisites: ['dragon', 'monsters'],
-    image: 'treasure-chests.png',
-    audio: 'treasure-chests.wav',
-    action: 'chest-opening.wav',
+    image: 'dungeon.png',
     description: `
         As you enter the quest chamber you notice three chests before you.
         Just as you start to imagine the wealth, you see a giant serpent
