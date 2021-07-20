@@ -8,6 +8,6 @@ userForm.addEventListener('submit', e => {
     const formData = new FormData(userForm);
     const newUser = createUser(formData);
     saveUser(newUser);
-    window.location = '../map/map.js';
+    window.location = '../map/index.html';
 });
 
