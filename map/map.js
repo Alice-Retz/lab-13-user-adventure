@@ -1,12 +1,14 @@
 import quests from '../data/quest-data.js';
 import { getUser } from '../data/storage-utils.js';
 import { hasCompletedAllQuests } from './has-completed-all-quests.js';
+import loadProfile from './load-profile.js';
 
+loadProfile();
 
 const user = getUser();
 
 if (user.hp <= 0 || hasCompletedAllQuests(user)) {
-    window.location('../results');
+    window.location = '../results';
 }
 
 const questList = document.getElementById('quest-list');

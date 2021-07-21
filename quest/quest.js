@@ -1,6 +1,9 @@
 import quests from '../data/quest-data.js';
 import findById from '../data/find-by-id.js';
 import { getUser, saveUser } from '../data/storage-utils.js';
+import loadProfile from '../map/load-profile.js';
+
+loadProfile();
 
 const searchParams = new URLSearchParams(window.location.search);
 console.log(searchParams.get('questId'));

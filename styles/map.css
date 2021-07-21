@@ -1,24 +1,24 @@
-#quest-list {
-    display: flex;
-    flex-direction: column;
+
+main {
+    background-image: url("../assets/map.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    height: 500px;
 }
 
 #quest-list {
+    display: flex;
+    flex-direction: column;
     position: relative;
-    background-image: url("../assets/map.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 90vw;
-    height: calc(90vw * 642 / 900);
-    margin: auto;
+    padding: 10px;
+    border: rgb(247, 232, 169) solid 3px;
+    border-radius: 20px;
+    background-color: rgb(83, 52, 11);
 }
 
 h2 {
     color: rgb(247, 232, 169);
     font-size: 50px;
-    text-shadow: 0 0 3px rgb(75, 47, 22);
-}
-
-link {
-    color: beige;
+    text-shadow: 2px 0 0 rgb(83, 52, 11), -2px 0 0 rgb(83, 52, 11), 0 2px 0 rgb(83, 52, 11), 0 -2px 0 rgb(83, 52, 11), 1px 1px rgb(83, 52, 11), -1px -1px 0 rgb(83, 52, 11), 1px -1px 0 rgb(83, 52, 11), -1px 1px 0 rgb(83, 52, 11);
 }

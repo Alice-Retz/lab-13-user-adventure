@@ -1,7 +1,7 @@
 
 body {
     background: rgb(195, 245, 179);
-    margin: 0;
+    margin: 0px 0px 70px 0px;
 }
 
 h1, h2 {
@@ -16,6 +16,9 @@ h1, h2 {
 header, main {
     padding: 8px;
 }
+header #avatar {
+    height: 50px;
+}
 
 header {
     
@@ -24,6 +27,8 @@ header {
     justify-content: space-between;
     background: white;
     border-bottom: 1px solid rgb(17, 155, 4);
+    font-family: 'IM Fell French Canon SC', serif;
+    font-weight: 600;
 }
 
 header img {
@@ -32,7 +37,7 @@ header img {
 
 h1 {
     font-family: 'IM Fell DW Pica SC', serif;
-    font-size: 70px;
+    font-size: 60px;
     margin: 0 20px;
     flex-grow: 2;
 }
@@ -69,10 +74,15 @@ input[type=radio]:checked + label {
 button {
     margin: 20px 0;
     padding: 20px;
-    margin-bottom: 100px;
     font-family: 'IM Fell DW Pica SC', serif;
     font-size: 1.2em;
     font-weight: bolder;
+}
+
+a {
+    color: rgb(247, 232, 169);
+    font-size: 20px;
+    text-shadow: 0 0 3px rgb(75, 47, 22);
 }
 
 footer {
@@ -85,9 +95,6 @@ footer {
     padding-top: 25px;
 }
 
-.hidden {
-    display: none;
-}
 
 .text-prompt {
     display: block;
@@ -124,6 +131,26 @@ footer {
     margin: 0 7px;
 }
 
+#quest-title {
+    font-size: 50px;
+}
+
+#quest-image {
+    height: 200px;
+}
+#quest-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+}
+
+.choice-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 /* check what this is  */
 .profile {
@@ -142,4 +169,8 @@ footer {
 
 .avatar {
     height: 50px;
+}
+
+.hidden {
+    display: none;
 }
