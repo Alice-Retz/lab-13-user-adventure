@@ -1,3 +1,8 @@
+export const livedOrDiedText = {
+    lived: `Your first adventure has come to an end!`,
+    died: `Your adventure has come to an early end`
+};
+
 export const goldAndAliveText = {
     poor: 'you live as a poor beggar',
     modest: 'you live in a modest hut farming the earth',

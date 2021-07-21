@@ -1,17 +1,23 @@
 import { getUser } from '../data/storage-utils.js';
 import finalHP from './finalHP.js';
 import finalGold from './finalGold.js';
-import { finalHpText, goldAndAliveText, goldAndDeadText } from './resultText.js';
+import { livedOrDiedText, finalHpText, goldAndAliveText, goldAndDeadText } from './resultText.js';
 import loadProfile from '../map/load-profile.js';
 
 loadProfile();
 
 const user = getUser();
+const endDisplay = document.getElementById('lived-or-died');
 const storyDisplay = document.getElementById('story-display');
 
 const endHp = finalHP(user.hp);
 const endGold = finalGold(user.gold);
 const endHpText = finalHpText[endHp];
+
+endDisplay.textContent = end;
+
+let endText  = ''
+
 
 let endGoldText = null;
 if (endHp === 'dead') {

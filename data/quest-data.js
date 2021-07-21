@@ -2,10 +2,6 @@
 const forest = {
     id: 'forest',
     title: 'Enter the Scary Forest',
-    map: {
-        top: '89%',
-        left: '44%'
-    },
     image: 'forest.png',
     description: `
         You decide yo prove your bravery by entering the scary forest. You've 
@@ -59,91 +55,139 @@ const forest = {
 const bear = {
     id: 'bear',
     title: 'Find the Dangerous Bear',
-    map: {
-        top: '17%',
-        left: '37%'
-    },
     image: 'bear.png',
     description: `
-        You hear tell in the market about a bear that has been digging up folx' 
+        You hear tell in the market about a bear that has been digging up folks' 
         larders and eating whatever is inside, including the owners! This is 
         your chance to make a name for yourself as a brave adventurer. You 
-        narrow down a likely area to find the bear from the rumors you collect,
+        narrow down a likely area to find the bear from the rumors you collect, 
+        and head out. You expected the bear to be a hulking behemoth, but you
+        weren't expecting it to be so quiet. You don't notice it's behind you
+        until you hear it snort loudly. As you swing around to face it, what 
+        do you do?
          
     `,
     choices: [{
         id: 'run',
-        description: 'Get the hell out of the village',
+        description: 'Nope out of there as fast as you can.',
         result: `
-            You high tail it in the opposite direction. Luckily,
-            in the panic you find a bag on the ground with 15 gold.
-            Unluckily, you trip over a discarded wagon wheel on your
-            way out of town and take 40 hp damage. 
+           Nope, you changed your mind. Renown isn't worth this. As fast as your 
+           little legs can carry you, which is surprisingly fast, you flee home.
+           You don't look back to see if you're being pursued, for fear of 
+           slowing down. You manage to make it home safely by evening, but 
+           since you spent the whole day traipsing around instead of doing 
+           something productive, you didn't earn any money and can't buy dinner.
+           You loose 5hp to hunger. 
         `,
-        hp: -35,
-        gold: 15
-    }, {
-        id: 'fight',
-        description: 'Fiiiiiggghhhttt!',
-        result: `
-            You attempt to charge towards the dragon, who sees you approach
-            and let's loose a fireball. You wake up the next morning and the
-            village has been completely burned to the ground.
-            Oh, and you take 45 hp damage.
-        `,
-        hp: -45,
+        hp: -5,
         gold: 0
     }, {
-        id: 'archer',
-        description: 'Emulate that guy from LOR who shot an arrow',
+        id: 'fight',
+        description: 'Fight!',
         result: `
-            Inspired by the legend of Bard the Bowman, you notice a
-            stunned archer standing nearby and take their bow and quiver,
-            climb to the top of a tall tower and take aim. On the dragon's
-            next pass you steady your aim and let one fly. Amazingly,
-            you strike the dragon in the eye, piercing into the brain and
-            killing the dragon instantly. The villagers declare you their hero
-            and award you 90 gold.
+            With as big of a cry as you can muster, you draw the string of your 
+            matchstick crossbow, letting loose a sharp wooden pick into the 
+            bear's neck. It hits it's mark! Unfortunately, bears have thick fur 
+            and loose skin at their necks specifically for combat purposes. The
+            bear registers your intent, even if it doesn't register that hit.
+            With a single swipe of it's massive paw it's all over for you.
+        `,
+        hp: -50,
+        gold: 0
+    }, {
+        id: 'bargain',
+        description: 'Try to bargain?',
+        result: `
+            You feel the fight drain out of you as you face the massive bear. 
+            With your feet suddenly feeling like lead, your only option is to 
+            stutter out a "H-hey you!" The bear leans down close, but much to 
+            your surprise, he doesn't proceed to eat you. Instead he asks, 
+            "Yes?" Huh. Not what you expected, but gaining some courage you 
+            proceed to tell the bear in no uncertain terms that he can't keep 
+            eating folks. The bear, who you learn is actually a juvenile new 
+            to the area, reveals that he didn't realize he was digging up 
+            folks' homes, he just smelled food under the ground and dug it up.
+            He sheepishly apologizes for eating your neighbors, and accepts 
+            your directions to an unsettled part of the forest where he can 
+            forage in peace. When you return to town and tell them of what 
+            transpired, with only minimal embellishment, they celebrate and 
+            reward you with 50 gold, a small fortune!
+
         `,
         hp: 0,
-        gold: 90
+        gold: 50
     }]
 };
 
 const dungeon = {
     id: 'dungeon',
     title: 'Explore a spooky dungeon',
-    map: {
-        top: '31%',
-        left: '5%'
-    },
-    prerequisites: ['dragon', 'monsters'],
     image: 'dungeon.png',
     description: `
-        As you enter the quest chamber you notice three chests before you.
-        Just as you start to imagine the wealth, you see a giant serpent
-        emerge from the back of the chamber. You'll need to make a run for it,
-        but you have time to open one chest before you take off. Which one 
-        do you choose?
+        In order to prove your bravery, you decide to take part in a
+        local right of passage: bring home a treasure from the giant's 
+        dungeon. The passage there makes for an easy trek, being too small 
+        for a giant to even fit their hand in. Once you arrive, though, 
+        you're overwhelmed by the size and amount of treasure you find.
+        Great casks, tall as a tree by your reckoning, are filled with a
+        rotten smelling liquid, but they make for easy passage to the 
+        massive shelves that hold lifetimes worth of food and supplies. 
+        What do you do?
     `,
     choices: [{
-        id: 'wooden',
-        description: 'A Wooden Chest',
-        result: 'You grab 40 gold pieces!',
+        id: 'caution',
+        description: 'Be cautious.',
+        result: `You begin stuffing your bag with as much as you can grab 
+        of the food from end of the shelf. On the shelf above, out of your 
+        reach, you see valuable supplies that can be used for construction 
+        and medicine. As you're considering going further, though, you 
+        hear monstrous footfalls coming from behind a giant's door. You 
+        close your bag and hurry back to the tunnel. It's a respectable 
+        haul, earning you 15 gold and, more importantly, the respect of 
+        your peers.`,
         hp: 0,
-        gold: 40
+        gold: 15
     }, {
-        id: 'golden',
-        description: 'A Golden Chest',
-        result: 'Oh no! The chest is booby trapped with poison and you take 50 hp damage',
+        id: 'greedy',
+        description: 'Be greedy.',
+        result: `You didn't know so much food existed in the world, let 
+        alone in one place. Of course, you need to sample it. Make sure 
+        the giants didn't poison it. They're so crafty. You dive head 
+        first into the nearest pile of grapes and proceed to eat your 
+        way across the shelf, sampling everything you can find. Your 
+        bag lays forgotten on the edge. You hear neither the giant's 
+        footsteps, nor the door opening as you contentedly lounge on a 
+        soft loaf of bread. It's not until you hear a thunderous "What 
+        the-" that you open your eyes to see a giant staring at you, 
+        his face mere inches away. As you yelp in surprise he also 
+        screams, temporarily stunning you with it's force. You start to 
+        run for the far end of the shelf, hoping to make it back to the
+        tunnel. But as you reach the ledge, your escape slowed by your 
+        distended belly, a shadow falls over you. You glance up just 
+        before the massive shoe comes down on you, and it's all over.`,
         hp: -50,
         gold: 0
     }, {
-        id: 'jeweled',
-        description: 'A Jeweled Chest',
-        result: 'A warm light engulfs you and you gain 35 hp',
-        hp: 35,
-        gold: 0
+        id: 'reckless',
+        description: 'Be reckless!',
+        result: `You didn't know so much food existed in the world, let 
+        alone in one place. As you stuff your bag, and to a lesser extent 
+        your face, you glance upwards to see more than a lifetime's worth
+        of construction and medical supplies. In your excitement, you 
+        don't hear the approaching footsteps coming from behind the giant's 
+        door. You find a bag much larger than yourself and swiftly begin
+        filling it with the most valuable of the supplies. When the giant's
+        door opens you freeze instinctively, but it's not enough to stop
+        him from seeing you frozen mid-grab. With a bone shaking scream 
+        he reaches blindly to find a weapon. You snap out of your fear and,
+        grabbing the bag, take a running leap off the shelf and to the floor.
+        You're to the mouth of the cave when you are struck from behind with
+        incredible force. Dazed and in pain, you scurry as fast as you can 
+        down the tunnel, dragging your spoils behind you. You make it back 
+        to the edge of town before collapsing from your wounds. You've 
+        obtained 100 gold in supplies, but taken 30 damage.`,
+        hp: -30,
+        gold: 100
     }]
 };
 
