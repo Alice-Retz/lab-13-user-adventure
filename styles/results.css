@@ -7,14 +7,15 @@ main {
     height: 500px;
 }
 
-#quest-list {
+#story-display {
     display: flex;
     flex-direction: column;
     position: relative;
+    width: 500px;
     padding: 10px;
-    border: rgb(247, 232, 169) solid 3px;
+    border: rgb(110, 65, 5) solid 3px;
     border-radius: 20px;
-    background-color: rgb(83, 52, 11);
+    background-color: rgb(247, 232, 169);
 }
 
 h2 {

@@ -1,0 +1,17 @@
+
+#quest-title {
+    color: rgb(247, 232, 169);
+    font-size: 50px;
+    text-shadow: 2px 0 0 rgb(83, 52, 11), -2px 0 0 rgb(83, 52, 11), 0 2px 0 rgb(83, 52, 11), 0 -2px 0 rgb(83, 52, 11), 1px 1px rgb(83, 52, 11), -1px -1px 0 rgb(83, 52, 11), 1px -1px 0 rgb(83, 52, 11), -1px 1px 0 rgb(83, 52, 11);
+}
+
+#quest-description {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 500px;
+    padding: 10px;
+    border: rgb(110, 65, 5) solid 3px;
+    border-radius: 20px;
+    background-color: rgb(247, 232, 169);
+}
