@@ -1,8 +1,8 @@
-import loadProfile from '../map/load-profile.js';
 import { getUser } from '../data/storage-utils.js';
 import finalHP from './finalHP.js';
-import finalGold from './finalgold.js';
-import { finalHpText, goldAndAliveText, goldAndDeadText } from './messages.js';
+import finalGold from './finalGold.js';
+import { finalHpText, goldAndAliveText, goldAndDeadText } from './resultText.js';
+import loadProfile from '../map/load-profile.js';
 
 loadProfile();
 
@@ -13,18 +13,18 @@ const endHp = finalHP(user.hp);
 const endGold = finalGold(user.gold);
 const endHpText = finalHpText[endHp];
 
-let goldMessages = null;
+let endGoldText = null;
 if (endHp === 'dead') {
-    goldMessages = goldAndDeadText;
+    endGoldText = goldAndDeadText;
 }
 else {
-    goldMessages = goldAndAliveText;
+    endGoldText = goldAndAliveText;
 }
 
-const goldMessage = goldMessages[endGold];
+const goldText = endGoldText[endGold];
 
 let story = 'After your adventures, ';
-story += user.name + ' the ' + user.race + ', ';
-story += endHpText + ' and ' + goldMessage + '.';
+story += user.name + ' the ' + user.lineage + ', ';
+story += endHpText + ' and ' + goldText + '.';
 
 storyDisplay.textContent = story;
