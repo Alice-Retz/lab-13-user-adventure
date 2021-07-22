@@ -33,9 +33,17 @@ else {
 
 const goldText = endGoldText[endGold];
 
-let story = 'After your adventures, ';
-story += user.name + ' the ' + user.lineage + ', ';
-story += endHpText + ' and ' + goldText + '.';
+let story = null;
+if (endHp === 'dead') {
+    story = 'Well, ';
+    story += user.name + ' the ' + user.lineage + ', ';
+    story += endHpText + ' ' + goldText + ' ';
+} else {
+    story = 'After a few big quests, ';
+    story += user.name + ' the ' + user.lineage + ', you return home ';
+    story += endHpText + ' ' + goldText + '.';
+
+}
 
 endText.textContent = endTitle;
 storyDisplay.textContent = story;
