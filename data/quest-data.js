@@ -12,7 +12,7 @@ const forest = {
     `,
     choices: [{
         id: 'hide',
-        description: 'Hide!',
+        description: 'Hide!*',
         result: `
             You dive inside of a hollow, moss covered log just as the hawk's 
             talons scrape the ground where you stood. You hear the hawk's wings 
@@ -69,7 +69,7 @@ const bear = {
     `,
     choices: [{
         id: 'run',
-        description: 'Nope out of there as fast as you can.',
+        description: 'Nope out of there as fast as you can.*',
         result: `
            Nope, you changed your mind. Renown isn't worth this. As fast as your 
            little legs can carry you, which is surprisingly fast, you flee home.
@@ -136,7 +136,7 @@ const dungeon = {
     `,
     choices: [{
         id: 'caution',
-        description: 'Be cautious.',
+        description: 'Be cautious.*',
         result: `You begin stuffing your bag with as much as you can grab 
         of the food from end of the shelf. On the shelf above, out of your 
         reach, you see valuable supplies that can be used for construction 
